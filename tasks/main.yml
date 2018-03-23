@@ -61,6 +61,7 @@
   become: yes
   become_user: root
   command: '{{anaconda_conda_bin}} remove -y curl'
+  ignore_errors: True
   args:
     removes: '{{anaconda_link_dir}}/lib/libcurl.a'
 
